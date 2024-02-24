@@ -3,3 +3,16 @@ Bedrock is Concrete's front end library. It is used to support Concrete itself, 
 
 ## More Information
 https://documentation.concretecms.org/tutorials/submitting-user-interface-pull-requests-for-concrete-cms-version-9
+
+## Storybook
+[View our storybook](https://concretecms.github.io/bedrock/?path=/docs/docs--docs) for examples of how to use each 
+component
+
+See [/stories/ExampleStories.js](stories/ExampleStories.js) for an example for how to add stories and 
+[/stories/Docs.mdx](stories/Docs.mdx) to see how to add documentation pages.
+
+## Githooks
+To run the provided [.githooks](.githooks) in your local repository, run:
+```bash
+git config --local core.hooksPath .githooks
+```

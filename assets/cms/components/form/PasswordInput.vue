@@ -66,6 +66,7 @@ export default {
             default: false
         }
     },
+    emits: ['change'],
     computed: {
         inputType() {
             return this.passwordVisible ? 'text' : 'password'
@@ -86,6 +87,11 @@ export default {
             return this.passwordStrengthOptions.filter(
                 (option) => option.id >= 0
             )
+        }
+    },
+    watch: {
+        enteredPassword(v) {
+            this.$emit('change', v)
         }
     },
     mounted() {

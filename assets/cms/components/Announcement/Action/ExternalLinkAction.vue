@@ -14,12 +14,6 @@ export default {
             type: String,
             required: true
         }
-    },
-    data: () => ({
-    }),
-    methods: {
-    },
-    mounted() {
     }
 }
 </script>
