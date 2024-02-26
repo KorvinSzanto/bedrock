@@ -1,0 +1,519 @@
+.ccm-editor-nested-link {
+  list-style-type: none;
+}
+
+
+
+
+/** ------------- */
+
+.ccm-editor-theme--ltr {
+  text-align: left;
+}
+
+.ccm-editor-theme--rtl {
+  text-align: right;
+}
+
+.ccm-editor-theme--paragraph {
+  margin: 0;
+  position: relative;
+}
+
+.ccm-editor-theme--quote {
+  border-left-color: rgb(206, 208, 212);
+  border-left-style: solid;
+  border-left-width: 4px;
+  color: rgb(101, 103, 107);
+  font-size: 15px;
+  margin: 0;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  padding-left: 16px;
+}
+
+.ccm-editor-theme--h1 {
+  color: rgb(5, 5, 5);
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.ccm-editor-theme--h2 {
+  color: rgb(101, 103, 107);
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.ccm-editor-theme--h3 {
+  font-size: 12px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.ccm-editor-theme--indent {
+  --lexical-indent-base-value: 40px;
+}
+
+.ccm-editor-theme--textBold {
+  font-weight: bold;
+}
+
+.ccm-editor-theme--textItalic {
+  font-style: italic;
+}
+
+.ccm-editor-theme--textUnderline {
+  text-decoration: underline;
+}
+
+.ccm-editor-theme--textStrikethrough {
+  text-decoration: line-through;
+}
+
+.ccm-editor-theme--textUnderlineStrikethrough {
+  text-decoration: underline line-through;
+}
+
+.ccm-editor-theme--textSubscript {
+  font-size: 0.8em;
+  vertical-align: sub !important;
+}
+
+.ccm-editor-theme--textSuperscript {
+  font-size: 0.8em;
+  vertical-align: super;
+}
+
+.ccm-editor-theme--textCode {
+  background-color: rgb(240, 242, 245);
+  font-family: Menlo, Consolas, Monaco, monospace;
+  font-size: 94%;
+  padding: 1px 0.25rem;
+}
+
+.ccm-editor-theme--hashtag {
+  background-color: rgba(88, 144, 255, 0.15);
+  border-bottom: 1px solid rgba(88, 144, 255, 0.3);
+}
+
+.ccm-editor-theme--link {
+  color: rgb(33, 111, 219);
+  text-decoration: none;
+}
+
+.ccm-editor-theme--link:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.ccm-editor-theme--code {
+  background-color: rgb(240, 242, 245);
+  display: block;
+  font-family: Menlo, Consolas, Monaco, monospace;
+  font-size: 13px;
+  line-height: 1.53;
+  margin: 0;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  overflow-x: auto;
+  padding: 8px 8px 8px 52px;
+  position: relative;
+  tab-size: 2;
+}
+
+.ccm-editor-theme--code::before {
+  background-color: #eee;
+  border-right: 1px solid #ccc;
+  color: #777;
+  content: attr(data-gutter);
+  left: 0;
+  min-width: 25px;
+  padding: 8px;
+  position: absolute;
+  text-align: right;
+  top: 0;
+  white-space: pre-wrap;
+}
+
+.ccm-editor-theme--table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 30px 0;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  table-layout: fixed;
+  width: max-content;
+}
+
+.ccm-editor-theme--tableSelection *::selection {
+  background-color: transparent;
+}
+
+.ccm-editor-theme--tableSelected {
+  outline: 2px solid rgb(60, 132, 244);
+}
+
+.ccm-editor-theme--tableCell {
+  border: 1px solid #bbb;
+  min-width: 75px;
+  outline: none;
+  padding: 6px 8px;
+  position: relative;
+  text-align: start;
+  vertical-align: top;
+  width: 75px;
+}
+
+.ccm-editor-theme--tableCellSortedIndicator {
+  background-color: #999;
+  bottom: 0;
+  display: block;
+  height: 4px;
+  left: 0;
+  opacity: 0.5;
+  position: absolute;
+  width: 100%;
+}
+
+.ccm-editor-theme--tableCellResizer {
+  cursor: ew-resize;
+  height: 100%;
+  position: absolute;
+  right: -4px;
+  top: 0;
+  width: 8px;
+  z-index: 10;
+}
+
+.ccm-editor-theme--tableCellHeader {
+  background-color: #f2f3f5;
+  text-align: start;
+}
+
+.ccm-editor-theme--tableCellSelected {
+  background-color: #c9dbf0;
+}
+
+.ccm-editor-theme--tableCellPrimarySelected {
+  border: 2px solid rgb(60, 132, 244);
+  display: block;
+  height: calc(100% - 2px);
+  left: -1px;
+  position: absolute;
+  top: -1px;
+  width: calc(100% - 2px);
+  z-index: 2;
+}
+
+.ccm-editor-theme--tableCellEditing {
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+.ccm-editor-theme--tableAddColumns {
+  animation: table-controls 0.2s ease;
+  background-color: #eee;
+  border: 0;
+  cursor: pointer;
+  height: 100%;
+  position: absolute;
+  right: -25px;
+  top: 0;
+  width: 20px;
+}
+
+.ccm-editor-theme--tableAddColumns::after {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: ' ';
+  display: block;
+  height: 100%;
+  left: 0;
+  opacity: 0.4;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.ccm-editor-theme--tableAddColumns:hover {
+  background-color: #c9dbf0;
+}
+
+.ccm-editor-theme--tableAddRows {
+  animation: table-controls 0.2s ease;
+  background-color: #eee;
+  border: 0;
+  bottom: -25px;
+  cursor: pointer;
+  height: 20px;
+  left: 0;
+  position: absolute;
+  width: calc(100% - 25px);
+}
+
+.ccm-editor-theme--tableAddRows::after {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: ' ';
+  display: block;
+  height: 100%;
+  left: 0;
+  opacity: 0.4;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.ccm-editor-theme--tableAddRows:hover {
+  background-color: #c9dbf0;
+}
+@keyframes table-controls {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.ccm-editor-theme--tableCellResizeRuler {
+  background-color: rgb(60, 132, 244);
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 1px;
+}
+
+.ccm-editor-theme--tableCellActionButtonContainer {
+  display: block;
+  height: 20px;
+  position: absolute;
+  right: 5px;
+  top: 6px;
+  width: 20px;
+  z-index: 4;
+}
+
+.ccm-editor-theme--tableCellActionButton {
+  background-color: #eee;
+  border: 0;
+  border-radius: 20px;
+  color: #222;
+  cursor: pointer;
+  display: block;
+  height: 20px;
+  width: 20px;
+}
+
+.ccm-editor-theme--tableCellActionButton:hover {
+  background-color: #ddd;
+}
+
+.ccm-editor-theme--characterLimit {
+  background-color: #fbb !important;
+  display: inline;
+}
+
+.ccm-editor-theme--ol1 {
+  list-style-position: inside;
+  margin: 0;
+  padding: 0;
+}
+
+.ccm-editor-theme--ol2 {
+  list-style-position: inside;
+  list-style-type: upper-alpha;
+  margin: 0;
+  padding: 0;
+}
+
+.ccm-editor-theme--ol3 {
+  list-style-position: inside;
+  list-style-type: lower-alpha;
+  margin: 0;
+  padding: 0;
+}
+
+.ccm-editor-theme--ol4 {
+  list-style-position: inside;
+  list-style-type: upper-roman;
+  margin: 0;
+  padding: 0;
+}
+
+.ccm-editor-theme--ol5 {
+  list-style-position: inside;
+  list-style-type: lower-roman;
+  margin: 0;
+  padding: 0;
+}
+
+.ccm-editor-theme--ul {
+  list-style-position: inside;
+  margin: 0;
+  padding: 0;
+}
+
+.ccm-editor-theme--listItem {
+  margin: 0 32px;
+}
+
+.ccm-editor-theme--listItemChecked,
+.ccm-editor-theme--listItemUnchecked {
+  list-style-type: none;
+  margin-left: 8px;
+  margin-right: 8px;
+  outline: none;
+  padding-left: 24px;
+  padding-right: 24px;
+  position: relative;
+}
+
+.ccm-editor-theme--listItemChecked {
+  text-decoration: line-through;
+}
+
+.ccm-editor-theme--listItemUnchecked::before,
+.ccm-editor-theme--listItemChecked::before {
+  background-size: cover;
+  content: '';
+  cursor: pointer;
+  display: block;
+  height: 16px;
+  left: 0;
+  position: absolute;
+  top: 2px;
+  width: 16px;
+}
+
+.ccm-editor-theme--listItemUnchecked[dir='rtl']::before,
+.ccm-editor-theme--listItemChecked[dir='rtl']::before {
+  left: auto;
+  right: 0;
+}
+
+.ccm-editor-theme--listItemUnchecked:focus::before,
+.ccm-editor-theme--listItemChecked:focus::before {
+  border-radius: 2px;
+  box-shadow: 0 0 0 2px #a6cdfe;
+}
+
+.ccm-editor-theme--listItemUnchecked::before {
+  border: 1px solid #999;
+  border-radius: 2px;
+}
+
+.ccm-editor-theme--listItemChecked::before {
+  background-color: #3d87f5;
+  background-repeat: no-repeat;
+  border: 1px solid rgb(61, 135, 245);
+  border-radius: 2px;
+}
+
+.ccm-editor-theme--listItemChecked::after {
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  content: '';
+  cursor: pointer;
+  display: block;
+  height: 6px;
+  left: 7px;
+  position: absolute;
+  right: 7px;
+  top: 6px;
+  transform: rotate(45deg);
+  width: 3px;
+}
+
+.ccm-editor-theme--nestedListItem {
+  list-style-type: none;
+}
+
+.ccm-editor-theme--nestedListItem::before,
+.ccm-editor-theme--nestedListItem::after {
+  display: none;
+}
+
+.ccm-editor-theme--tokenComment {
+  color: slategray;
+}
+
+.ccm-editor-theme--tokenPunctuation {
+  color: #999;
+}
+
+.ccm-editor-theme--tokenProperty {
+  color: #905;
+}
+
+.ccm-editor-theme--tokenSelector {
+  color: #690;
+}
+
+.ccm-editor-theme--tokenOperator {
+  color: #9a6e3a;
+}
+
+.ccm-editor-theme--tokenAttr {
+  color: #07a;
+}
+
+.ccm-editor-theme--tokenVariable {
+  color: #e90;
+}
+
+.ccm-editor-theme--tokenFunction {
+  color: #dd4a68;
+}
+
+.ccm-editor-theme--mark {
+  background: rgba(255, 212, 0, 0.14);
+  border-bottom: 2px solid rgba(255, 212, 0, 0.3);
+  padding-bottom: 2px;
+}
+
+.ccm-editor-theme--markOverlap {
+  background: rgba(255, 212, 0, 0.3);
+  border-bottom: 2px solid rgba(255, 212, 0, 0.7);
+}
+
+.ccm-editor-theme--mark.selected {
+  background: rgba(255, 212, 0, 0.5);
+  border-bottom: 2px solid rgba(255, 212, 0, 1);
+}
+
+.ccm-editor-theme--markOverlap.selected {
+  background: rgba(255, 212, 0, 0.7);
+  border-bottom: 2px solid rgba(255, 212, 0, 0.7);
+}
+
+.ccm-editor-theme--embedBlock {
+  position: relative;
+  user-select: none;
+  transition: outline-color 100ms ease-in-out;
+  outline: 2px solid transparent;
+}
+
+.ccm-editor-theme--embedBlockFocus {
+  transition: outline-color 100ms ease-in-out;
+  outline: 2px solid rgb(60, 132, 244);
+}
+
+.ccm-editor-theme--layoutContainer {
+  display: grid;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.ccm-editor-theme--layoutItem {
+  border: 1px dashed #ddd;
+  padding: 8px 16px;
+}
