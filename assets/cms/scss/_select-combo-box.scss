@@ -3,7 +3,7 @@
  * Selectize, select2, etc... Most of the styles for these components are contained in their own
  * library styles included in _base.scss, but this includes extensions to those component styles
  */
-@import '~tom-select/src/scss/tom-select.bootstrap5';
+@import 'tom-select/src/scss/tom-select.bootstrap5';
 
 /*
  * Reset color to better support dark mode

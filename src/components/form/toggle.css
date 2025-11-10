@@ -1,0 +1,26 @@
+:host {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+:host::part(title) {
+  margin-right: 8px;
+}
+
+:host(:state(off)) .affirmative,
+:host(:state(on)) .negative {
+  cursor: pointer;
+}
+
+.affirmative {
+  margin-right: 2px;
+}
+
+.affirmative,
+.negative {
+  align-items: center;
+  display: inline-flex;
+  justify-items: center;
+}

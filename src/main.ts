@@ -1,0 +1,14 @@
+export * from "./components/announcement";
+export * from "./components/avatar";
+export * from "./components/board";
+export * from "./components/customizer";
+export * from "./components/express";
+export * from "./components/file-manager";
+export * from "./components/form";
+export * from "./components/gallery";
+export * from "./components/groups";
+export * from "./components/help";
+export * from "./components/icon";
+export * from "./components/image";
+
+import "./icons.css";

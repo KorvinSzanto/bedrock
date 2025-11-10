@@ -1,0 +1,36 @@
+<html>
+
+<head>
+  <script src="src/main.ts" type="module"></script>
+  <style>
+    ccm-toggle::part(icon) {
+      color: rgba(0, 0, 0, 0.3);
+    }
+
+    ccm-toggle::part(icon active) {
+      color: green;
+    }
+  </style>
+</head>
+
+<body>
+  <form id="testForm" style='display: flex; flex-direction: column; gap: 1em; width: 200px;'>
+    <input name="foo" value="bar" />
+    <ccm-toggle name="testToggle" active></ccm-toggle>
+    <button type="submit">Submit</button>
+  </form>
+  <pre id="result">
+
+  </pre>
+
+  <script>
+    testForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const formData = new FormData(testForm);
+      const entries = Array.from(formData.entries()).map(([key, value]) => `${key}: ${value}`);
+      result.textContent = `Results:\n${entries.join('\n')}`;
+    });
+  </script>
+</body>
+
+</html>

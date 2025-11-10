@@ -1,0 +1,41 @@
+@reference "../../styles/main.css";
+
+table {
+  @apply w-full text-sm text-left rtl:text-right text-gray-500;
+}
+thead {
+  @apply text-xs text-gray-700 uppercase bg-gray-50;
+}
+tr {
+  @apply odd:bg-white even:bg-gray-50 border-b border-gray-200 cursor-pointer;
+}
+
+tr.active {
+  @apply bg-green-100
+}
+
+td, th {
+  @apply px-6 py-4 align-middle;
+}
+
+.skeleton > td > * {
+  @apply animate-pulse min-h-6 bg-gray-200 rounded-sm inline-block min-w-6;
+}
+
+.avatar > img, .avatar > div {
+  @apply rounded-xl aspect-square w-12 h-12;
+}
+
+.total-logins {
+  text-align: right;
+}
+
+.skeleton .name > span,
+.skeleton .date-added > span {
+  @apply w-20;
+}
+
+
+.skeleton .email > span {
+  @apply w-26;
+}

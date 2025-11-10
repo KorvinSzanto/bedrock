@@ -52,37 +52,37 @@
 </style>
 
 <script>
-import Icon from '../Icon'
+import Icon from "../Icon";
 
 export default {
-    components: {
-        Icon
-    },
-    props: {
-        value: {
-            type: Boolean,
-            required: true
-        },
-        affirmativeTitle: {
-            type: String,
-            default: 'Yes'
-        },
-        negativeTitle: {
-            type: String,
-            default: 'No'
-        }
-    },
-    methods: {
-        handleClick(newValue, props, listeners) {
-            if (props.value !== newValue) {
-                if (listeners.change) {
-                    listeners.change(newValue)
-                }
-                if (listeners.input) {
-                    listeners.input(newValue)
-                }
-            }
-        }
-    }
-}
+	components: {
+		Icon,
+	},
+	props: {
+		value: {
+			type: Boolean,
+			required: true,
+		},
+		affirmativeTitle: {
+			type: String,
+			default: "Yes",
+		},
+		negativeTitle: {
+			type: String,
+			default: "No",
+		},
+	},
+	methods: {
+		handleClick(newValue, props, listeners) {
+			if (props.value !== newValue) {
+				if (listeners.change) {
+					listeners.change(newValue);
+				}
+				if (listeners.input) {
+					listeners.input(newValue);
+				}
+			}
+		},
+	},
+};
 </script>

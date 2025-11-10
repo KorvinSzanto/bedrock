@@ -1,0 +1,74 @@
+
+:host {
+  --background-color: var(--color-white);
+  --outline-style: solid;
+  --outline-color: var(--color-gray-300);
+  --outline-width: 1px;
+  --shadow: var(--inset-shadow-sm);
+  --active-background-color: var(--color-emerald-200);
+  --active-outline-color: var(--color-emerald-600);
+  --active-outline-style: var(--outline-style);
+  --active-outline-width: var(--outline-width);
+  --active-shadow: var(--shadow);
+
+  --bubble-background-color: var(--color-white);
+  --bubble-outline-style: var(--outline-style);
+  --bubble-outline-color: var(--color-gray-300);
+  --bubble-outline-width: var(--outline-width);
+  --bubble-shadow: var(--shadow-md);
+  --active-bubble-background-color: var(--color-emerald-600);
+  --active-bubble-outline-style: var(--bubble-outline-style);
+  --active-bubble-outline-width: var(--bubble-outline-width);
+  --active-bubble-outline-color: var(--color-emerald-600);
+  --active-bubble-shadow: var(--bubble-shadow);
+
+  --bubble-width: 1rem;
+  --bubble-height: 1rem;
+  --bubble-padding: 0.25rem;
+  --bubble-easing: var(--spring-easing);
+  --bubble-duration: var(--spring-duration);
+  --color-easing: ease-in-out;
+  --color-duration: 125ms;
+  --width: 3rem;
+  --height: calc(var(--bubble-height) + var(--bubble-padding) * 2);
+
+  display: inline-block;
+}
+
+:host::part(track) {
+  cursor: pointer;
+  width: var(--width);
+  height: var(--height);
+  padding: var(--bubble-padding);
+  outline: var(--outline-style) var(--outline-color) var(--outline-width);
+  background-color: var(--background-color);
+  transition: outline-color var(--color-duration), background-color var(--color-duration);
+  box-shadow: var(--shadow);
+}
+
+:host(:state(on))::part(track) {
+  outline: var(--active-outline-style) var(--active-outline-color) var(--active-outline-width);
+  background-color: var(--active-background-color);
+  box-shadow: var(--active-shadow);
+}
+
+:host::part(bubble) {
+  transition: transform var(--bubble-easing) var(--bubble-duration), 
+              background-color var(--color-easing) var(--color-duration), 
+              outline var(--color-easing) var(--color-duration);
+  box-shadow: var(--bubble-shadow);
+  width: var(--bubble-width);
+  height: var(--bubble-height);
+  outline: var(--bubble-outline-style) var(--bubble-outline-color) var(--bubble-outline-width);
+  background-color: var(--bubble-background-color);
+}
+
+:host(:state(off))::part(bubble) {
+  transform: translateX(calc(var(--width) - 100% - var(--bubble-padding) * 2));
+}
+
+:host(:state(on))::part(bubble) {
+  background-color: var(--active-bubble-background-color);
+  outline: var(--active-bubble-outline-style) var(--active-bubble-outline-color) var(--active-bubble-outline-width);
+  box-shadow: var(--active-bubble-shadow);
+}
