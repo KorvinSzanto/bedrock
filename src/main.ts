@@ -10,5 +10,3 @@ export * from "./components/groups";
 export * from "./components/help";
 export * from "./components/icon";
 export * from "./components/image";
-
-import "./icons.css";
